@@ -8622,4 +8622,3 @@ OMX_ERRORTYPE omx_vdec::createDivxDrmContext()
      return err;
 }
 #endif //_ANDROID_
-
