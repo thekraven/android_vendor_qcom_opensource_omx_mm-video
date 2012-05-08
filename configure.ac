@@ -32,6 +32,12 @@ AC_PROG_INSTALL
 AC_PROG_LN_S
 AC_PROG_MAKE_SET
 
+AC_ARG_ENABLE([target-msm7227],
+	AC_HELP_STRING([--enable-target-msm7227],
+		[Enable conditional compile for target msm7227 [default=no]]),
+	[target_msm7227="${enableval}"],
+	target_msm7227=no)
+
 AC_ARG_ENABLE([target-msm7630],
 	AC_HELP_STRING([--enable-target-msm7630],
 		[Enable conditional compile for target msm7630 [default=no]]),
@@ -44,6 +50,7 @@ AC_ARG_ENABLE([target-msm8660],
 	[target_msm8660="${enableval}"],
 	target_msm8660=no)
 
+AM_CONDITIONAL([TARGET_MSM7227], [test x$target_msm7227 = xyes])
 AM_CONDITIONAL([TARGET_MSM7630], [test x$target_msm7630 = xyes])
 AM_CONDITIONAL([TARGET_MSM8660], [test x$target_msm8660 = xyes])
 
