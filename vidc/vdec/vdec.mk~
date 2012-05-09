@@ -24,7 +24,7 @@ LDFLAGS_SO += -shared
 LDFLAGS := -L$(SYSROOTLIB_DIR)
 
 # hard coding target for 7630
-TARGET := 7227
+TARGET := 7630
 
 # ---------------------------------------------------------------------------------
 #					BUILD
