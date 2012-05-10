@@ -23,8 +23,15 @@ LDFLAGS_SO += -shared
 # linker flags
 LDFLAGS := -L$(SYSROOTLIB_DIR)
 
+# hard coding target for 7227 
+ifeq ($(TARGET_BOARD_PLATFORM),msm7x27) 
+TARGET := 7227 
+endif 
+
 # hard coding target for 7630
-TARGET := 7630
+ifeq ($(TARGET_BOARD_PLATFORM),msm7x30) 
+TARGET := 7630 
+endif 
 
 # ---------------------------------------------------------------------------------
 #					BUILD

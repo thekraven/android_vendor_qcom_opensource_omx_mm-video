@@ -24,7 +24,7 @@ LDFLAGS_SO += -shared
 LDFLAGS := -L$(SYSROOTLIB_DIR)
 
 # hard coding target for 7227
-ifeq ($(TARGET_BOARD_PLATFORM),msm7x30)
+ifeq ($(TARGET_BOARD_PLATFORM),msm7x27)
 TARGET := 7227
 endif
 
